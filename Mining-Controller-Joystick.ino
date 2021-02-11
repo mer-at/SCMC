@@ -1,8 +1,8 @@
 #include <Joystick.h>
-int LED=9;
+int LED=9; //LED shall be connected to Pin 9
 
-Joystick_ Joystick(JOYSTICK_DEFAULT_REPORT_ID,JOYSTICK_TYPE_JOYSTICK,3,0,
- true, false, false,     // X and Y, but no Z Axis
+Joystick_ Joystick(JOYSTICK_DEFAULT_REPORT_ID,JOYSTICK_TYPE_JOYSTICK,3,0, // 3 Buttons
+ true, false, false,     // X, no Y or Z Axis
  false, false, false,   // No Rx, Ry, or Rz
   false, false, false,          // No rudder or throttle
   false, false);  // No accelerator, brake, or steering
@@ -27,10 +27,10 @@ int ButtonStateDelayed[6] = {0,0,0};
 void thread_axis_x()
 {
     Joystick.setXAxis(analogRead(A0));
-    analogWrite(LED, analogRead(A0)/4 );
+    analogWrite(LED, analogRead(A0)/4 ); //change brightness of LED based on Axis Output
 }
 
-void buttons()
+void buttons() //read the 3 buttons, and do some basic debouncing
 {
   for (int index = 0; index < 3; index++)
   { ButtonState[index] = !digitalRead(index + 2); }
