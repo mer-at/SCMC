@@ -16,3 +16,5 @@ You can use any other Sliding Potentiometer as well, just make sure you use a li
 Connect the wires, install the Joystick Library, flash the code with Arduino IDE. And it should work.
 
 ![Alt text](/Schematic.png?raw=true "schematic")
+
+Also got a Case designed for it here: https://www.thingiverse.com/thing:4758367
