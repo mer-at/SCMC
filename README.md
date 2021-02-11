@@ -1,3 +1,3 @@
 # SCMC
 Star Citizen Mining Controller
-![Alt text](/schematic.png?raw=true "schematic")
+![Alt text](/Schematic.png?raw=true "schematic")
